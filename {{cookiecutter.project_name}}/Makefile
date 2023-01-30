@@ -22,7 +22,9 @@ create_environment:
 ifeq (True,$(HAS_CONDA))
 	conda env create -f requirements.yml
 endif
-@echo "New conda env created. Activate with: \nsource activate $(ROJECT_NAME)"
+	@echo "New conda env created. Activate with: \nsource activate $(ROJECT_NAME)"
+	chmod +x ./install_conda_kernel.sh
+	./install_conda_kernel.sh
 
 update_environment:
 	conda env update --file requirements.yml
