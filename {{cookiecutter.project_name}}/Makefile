@@ -25,7 +25,7 @@ endif
 @echo "New conda env created. Activate with: \nsource activate $(ROJECT_NAME)"
 
 update_environment:
-	conda env update --file environment.yml
+	conda env update --file requirements.yml
 
 delete_environment:
 	conda env remove -n $(PROJECT_NAME)
