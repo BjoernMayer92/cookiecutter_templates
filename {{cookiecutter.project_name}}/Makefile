@@ -29,7 +29,7 @@ endif
 
 update_environment:
 	conda env update --file requirements.yml
-	conda_functions.sh export
+	./conda_functions.sh export
 
 delete_environment:
 	conda env remove -n $(PROJECT_NAME)
